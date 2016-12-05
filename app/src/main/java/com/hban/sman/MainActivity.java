@@ -8,6 +8,7 @@ import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.hban.common.view.CommonDialog;
 import com.hban.sman.data.Drug;
 import com.hban.sman.mvpp.MvppActivity;
 import com.hban.sman.scan.WeChatCaptureActivity;
@@ -35,7 +36,7 @@ public class MainActivity extends Activity {
     @OnClick(R.id.main_text)
     public void onClick() {
         Intent a = new Intent(this, MvppActivity.class);
-        startActivity(a);
+        //startActivity(a);
         DBManager dbManager=DBManager.getInstance(this);
         for (int i = 0; i < 5; i++) {
             Drug drug = new Drug();
@@ -47,6 +48,9 @@ public class MainActivity extends Activity {
         for (Drug drug : userList) {
             Log.e("TAG", "queryUserList--before-->" + drug.getDrugCode()+ "--" + drug.getDrugName());
         }
+
+        CommonDialog dialog=new CommonDialog();
+        dialog.show(this.getFragmentManager(),"tag");
 
     }
 
