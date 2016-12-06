@@ -8,8 +8,8 @@
         android:color="#00ffffff" /> <!-- 定义描边的宽度和描边的颜色值 -->
     <!-- 圆角 -->
     <corners
-        android:bottomLeftRadius="5dp"
-        android:bottomRightRadius="5dp"
+        android:bottomLeftRadius="15dp"
+        android:bottomRightRadius="15dp"
         android:topLeftRadius="5dp"
         android:topRightRadius="5dp" /> <!-- 设置四个角的半径 -->
 </shape>

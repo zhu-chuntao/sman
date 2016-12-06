@@ -1,32 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/common_dialog_background">
+    android:background="@drawable/common_dialog_background"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/common_dg_top"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="#7799ff"
-        android:gravity="center">
+        android:text="jsjsjsjsjsj" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="@string/dialog_hint" />
-    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dip"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dip"
+                android:background="#ff0000"
+                android:text="sfdfasdfasfdafd" />
+
+            <ProgressBar
+                style="@style/myProgressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateDuration="800" />
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/common_dg_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_marginTop="-50dip"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:layout_width="wrap_content"
@@ -38,20 +53,4 @@
             android:layout_height="wrap_content"
             android:text="Cancle" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/common_dg_bottom"
-        android:layout_below="@+id/common_dg_top"
-        android:background="#ff0000">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="就介绍介绍介绍" />
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>
